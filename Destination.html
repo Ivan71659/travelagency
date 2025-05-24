@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+  <title>Travel Agency</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      text-align: center;
+      font-family: "Imperial Script", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+    h1 {
+      margin-top: 50px;
+    }
+    header {
+      background-color: #cbc8cc;
+      padding: 20px;
+    }
+    .link {
+      text-decoration: none;
+      margin: 0 50px;
+      color: black;
+      padding: 20px;
+      font-size: 50px;
+    }
+    .link:hover {
+      background-color: #555;
+    }
+    img {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class =  "link" href = "index.html">Home</a>
+    <a class =  "link" href = "Destinations.html">Destinations</a>
+    <a class =  "link" href = "Contact.html">Contact us</a>  
+  </header>
+
+  <h1>Destinations</h1>
+  <input type = "checkbox" onchange = "search ('france')"> France
+  <input type = "checkbox" onchange = "search ('uk')"> United Kingdom
+  <input type = "checkbox"onchange = "search ('italy')"> Italy
+  
+  <div>
+    <img src = "https://img.freepik.com/premium-vector/lovely-united-kingdom-travel-map-with-attractions_281653-624.jpg" width = "500" height = "500" id = "UK"> 
+    <img src = "https://img.freepik.com/premium-vector/adorable-france-travel-map-design-with-cats-famous-attractions_281653-631.jpg" width = "500" height = "500" id = "France">
+    <img src = "https://img.freepik.com/premium-vector/colorful-italy-travel-map-with-attraction-symbols-compass-sign-italian-words-hello-left-side_317442-17.jpg" width = "500" height = "500" id = "Italy">
+
+    <img src = "https://mashapasha.com/wp-content/uploads/2016/04/paris_map.jpg" width = "500" height = "500" id = "paris">
+    <img src = "https://www.romawonder.com/wp-content/uploads/2017/10/ROME-TOURIST-MAP.png" width = "500" height = "500" id = "rome">
+    <img src = "https://mapcollection.wordpress.com/wp-content/uploads/2012/07/london_centre_road_-_tourist_map.jpg" width = "500" height = "500" id = "london">
+  </div>
+
+  <script>
+    function search (country) {
+      var uk = document.getElementById ("UK");
+      var london = document.getElementById ("london");
+      var france = document.getElementById ("France");
+      var paris = document.getElementById ("paris");
+      var italy = document.getElementById ("Italy");
+      var rome = document.getElementById ("rome");
+
+      if(country == "uk"){
+        if (uk.style.display == "inline-block") {
+          uk.style.display = "none";
+        }
+        else {
+          uk.style.display = "inline-block";
+        }
+
+        if (london.style.display == "inline-block") {
+          london.style.display = "none";
+        }
+        else {
+          london.style.display = "inline-block";
+        }        
+      }
+
+      if(country == "france"){
+        if (france.style.display == "inline-block") {
+          france.style.display = "none";
+        }
+        else {
+          france.style.display = "inline-block";
+        }
+
+        if (paris.style.display == "inline-block") {
+          paris.style.display = "none";
+        }
+        else {
+          paris.style.display = "inline-block";
+        }        
+      }
+
+      if(country == "italy"){
+        if (italy.style.display == "inline-block") {
+          italy.style.display = "none";
+        }
+        else {
+          italy.style.display = "inline-block";
+        }
+
+        if (rome.style.display == "inline-block") {
+          rome.style.display = "none";
+        }
+        else {
+          rome.style.display = "inline-block";
+        }        
+      }
+    }
+  </script>
+</body>
+</html>
